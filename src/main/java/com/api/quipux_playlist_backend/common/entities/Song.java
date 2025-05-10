@@ -30,13 +30,13 @@ public class Song extends Principal {
     @Column(name = "artist", length = 50)
     private String artist;
 
-    @Column(name = "artist", length = 50)
+    @Column(name = "album", length = 50)
     private String album;
 
-    @Column(name = "release_year")
+    @Column(name = "year")
     private Integer year;
 
-    @Column(name = "artist", length = 50)
+    @Column(name = "genre", length = 50)
     private String genre;
 
 }

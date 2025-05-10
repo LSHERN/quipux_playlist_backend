@@ -35,6 +35,6 @@ public class PlayList extends Principal {
     @Column(name = "description", nullable = false, length = 200)
     private String description;
 
-    @OneToMany(mappedBy = "list_song", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "playList", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<ListSong> listSongs = new HashSet<>();
 }
