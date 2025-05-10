@@ -1,4 +1,4 @@
-package config;
+package com.api.quipux_playlist_backend.config;
 
 import lombok.Getter;
 import lombok.Setter;

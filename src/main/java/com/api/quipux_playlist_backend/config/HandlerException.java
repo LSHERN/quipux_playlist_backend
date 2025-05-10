@@ -1,4 +1,4 @@
-package config;
+package com.api.quipux_playlist_backend.config;
 
 import com.api.quipux_playlist_backend.common.exceptions.PlayListExceptions;
 import lombok.extern.slf4j.Slf4j;

@@ -1,6 +1,6 @@
-package config.services;
+package com.api.quipux_playlist_backend.config.services;
 
-import config.JwtProviderToken;
+import com.api.quipux_playlist_backend.config.JwtProviderToken;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -24,7 +24,7 @@ public class JwtFilterAuth extends OncePerRequestFilter {
 
     public static final int BEGIN_INDEX = 7;
     private final JwtProviderToken jwtProviderToken;
-    private final UserDetailsService userDetailsService;
+    private final CustomUserDetailService userDetailsService;
 
     @Override
     protected void doFilterInternal(@NonNull final HttpServletRequest request,

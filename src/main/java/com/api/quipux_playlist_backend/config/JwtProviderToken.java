@@ -1,4 +1,4 @@
-package config;
+package com.api.quipux_playlist_backend.config;
 
 import com.api.quipux_playlist_backend.common.entities.User;
 import io.jsonwebtoken.Claims;
