@@ -21,7 +21,7 @@ public class Principal {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_date", insertable = false)
-    private Date creationDate;
+    private Date createdDate;
 
     @Column(name = "is_active")
     private Boolean isActive;
