@@ -1,4 +1,4 @@
-package config.services;
+package com.api.quipux_playlist_backend.config.services;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 
