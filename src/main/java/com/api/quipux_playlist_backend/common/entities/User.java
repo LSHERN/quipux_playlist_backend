@@ -41,7 +41,7 @@ public class User extends Principal implements UserDetails {
     private String password;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "sec_profile")
+    @JoinColumn(name = "sec_role")
     private Role role;
 
     @Override

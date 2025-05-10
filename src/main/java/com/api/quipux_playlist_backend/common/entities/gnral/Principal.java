@@ -24,12 +24,12 @@ public class Principal {
     private Date creationDate;
 
     @Column(name = "is_active")
-    private Boolean isAactive;
+    private Boolean isActive;
 
     @PrePersist
     @PreUpdate
     public void setDefaultIsActiveValue() {
-        if (isAactive == null)
-            isAactive = Boolean.TRUE;
+        if (isActive == null)
+            isActive = Boolean.TRUE;
     }
 }
