@@ -8,6 +8,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,13 +38,13 @@ public class PlayListController {
     }
 
     @GetMapping(PlayListRoute.LIST_DESCRIPTION)
-    public ResponseEntity<FindDescriptionPlaylistResponse> findDescriptionPlaylist(@PathVariable final String nameList){
-        return ResponseEntity.ok(playListService.findDescriptionPlaylist(nameList));
+    public ResponseEntity<FindDescriptionPlaylistResponse> findDescriptionPlaylist(@PathVariable final String listName){
+        return ResponseEntity.ok(playListService.findDescriptionPlaylist(listName));
     }
 
-    @GetMapping(PlayListRoute.DELETE_LIST)
-    public ResponseEntity<Void> deletePlayList(@PathVariable final String nameList){
-        playListService.deletePlayList(nameList);
+    @DeleteMapping(PlayListRoute.DELETE_LIST)
+    public ResponseEntity<Void> deletePlayList(@PathVariable final String listName){
+        playListService.deletePlayList(listName);
         return ResponseEntity.noContent().build();
     }
 
