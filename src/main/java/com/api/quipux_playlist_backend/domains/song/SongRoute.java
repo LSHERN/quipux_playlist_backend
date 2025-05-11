@@ -4,7 +4,7 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
-public class SongRoute {
+public final class SongRoute {
 
     public static final String SONGS = "songs";
 }

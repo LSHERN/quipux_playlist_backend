@@ -1,6 +1,6 @@
 package com.api.quipux_playlist_backend.config;
 
-import com.api.quipux_playlist_backend.common.exceptions.PlayListExceptions;
+import com.api.quipux_playlist_backend.common.exceptions.PlayListException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ControllerAdvice
 public class HandlerException {
 
-    @ExceptionHandler({PlayListExceptions.class})
-    public ResponseEntity<Object> handlerNotFoundPlayListException(final PlayListExceptions e) {
+    @ExceptionHandler({PlayListException.class})
+    public ResponseEntity<Object> handlerNotFoundPlayListException(final PlayListException e) {
         log.error("HandlerException.handlerNotFoundException {e}", e);
         return ResponseEntity.notFound().build();
     }
