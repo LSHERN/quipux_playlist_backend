@@ -143,6 +143,7 @@ public class PlayListServiceImpl implements PlayListService{
      * @param nameList
      */
     @Override
+    @Transactional
     public void deletePlayList(String nameList){
         final PlayList playList = playListRepository.findByNameAndIsActiveTrue(nameList).orElseThrow(PlayListException::new);
         playList.setIsActive(Boolean.FALSE);

@@ -7,8 +7,6 @@ import lombok.RequiredArgsConstructor;
 public final class PlayListRoute {
 
     public static final String PLAY_LIST = "lists";
-    public static final String CREATE = "lists";
     public static final String LIST_DESCRIPTION = "{listName}";
     public static final String DELETE_LIST = "{listName}";
-    public static final String VALIDATE_EXIST_LIST = "{listName}/exits";
 }

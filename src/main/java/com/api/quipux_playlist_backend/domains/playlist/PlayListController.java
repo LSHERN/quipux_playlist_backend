@@ -22,11 +22,12 @@ import java.net.URI;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(PlayListRoute.PLAY_LIST)
+
 public class PlayListController {
 
     private final PlayListService playListService;
 
-    @PostMapping(PlayListRoute.CREATE)
+    @PostMapping
     public ResponseEntity<CreatedPlayListResponse> createPlayList(@RequestBody @Valid final CreatedPlayListRequest request){
         CreatedPlayListResponse response = playListService.createPlayList(request);
         return ResponseEntity.created(URI.create(String.format("lists/%d", response.getId()))).body(response);
